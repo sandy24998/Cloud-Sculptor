@@ -1,0 +1,26 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Jenkins
+workspace/
+
+# Kubernetes
+kubeconfig
+
+# Secrets
+*.pem
+*.key
+.env
