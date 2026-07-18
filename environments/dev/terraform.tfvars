@@ -21,3 +21,5 @@ availability_zones = [
 
 cluster_role_name = "cloud-sculptor-dev-eks-cluster-role"
 node_role_name    = "cloud-sculptor-dev-eks-node-role"
+
+cluster_name = "cloud-sculptor-dev-eks"
