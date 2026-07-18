@@ -1,3 +1,7 @@
+#################################################
+# VPC Outputs
+#################################################
+
 output "vpc_id" {
   value = module.vpc.vpc_id
 }
@@ -12,4 +16,44 @@ output "private_subnet_ids" {
 
 output "internet_gateway_id" {
   value = module.vpc.internet_gateway_id
+}
+
+#################################################
+# IAM Outputs
+#################################################
+
+output "cluster_role_arn" {
+  description = "EKS Cluster IAM Role ARN"
+
+  value = module.iam.cluster_role_arn
+}
+
+output "cluster_role_name" {
+  description = "EKS Cluster IAM Role Name"
+
+  value = module.iam.cluster_role_name
+}
+
+output "node_role_arn" {
+  description = "EKS Worker Node IAM Role ARN"
+
+  value = module.iam.node_role_arn
+}
+
+output "node_role_name" {
+  description = "EKS Worker Node IAM Role Name"
+
+  value = module.iam.node_role_name
+}
+
+#################################################
+# Security Group Outputs
+#################################################
+
+output "cluster_security_group_id" {
+  value = module.security_groups.cluster_security_group_id
+}
+
+output "node_security_group_id" {
+  value = module.security_groups.node_security_group_id
 }

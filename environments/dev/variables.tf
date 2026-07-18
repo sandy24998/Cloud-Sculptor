@@ -31,3 +31,9 @@ variable "node_role_name" {
   description = "EKS Worker Node IAM Role Name"
   type        = string
 }
+
+variable "cluster_name" {
+  description = "Amazon EKS Cluster Name"
+
+  type = string
+}
