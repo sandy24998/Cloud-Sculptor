@@ -18,3 +18,6 @@ availability_zones = [
   "ap-south-1a",
   "ap-south-1b"
 ]
+
+cluster_role_name = "cloud-sculptor-dev-eks-cluster-role"
+node_role_name    = "cloud-sculptor-dev-eks-node-role"

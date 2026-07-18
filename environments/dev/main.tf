@@ -14,3 +14,11 @@ module "vpc" {
 
   availability_zones = var.availability_zones
 }
+
+
+module "iam" {
+  source = "../../modules/iam"
+
+  cluster_role_name = var.cluster_role_name
+  node_role_name    = var.node_role_name
+}
