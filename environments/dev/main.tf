@@ -29,3 +29,20 @@ module "security_groups" {
   vpc_id       = module.vpc.vpc_id
   cluster_name = var.cluster_name
 }
+
+#################################################
+# Amazon EKS
+#################################################
+
+module "eks" {
+  source = "../../modules/eks"
+
+  cluster_name       = var.cluster_name
+  kubernetes_version = var.kubernetes_version
+
+  cluster_role_arn = module.iam.cluster_role_arn
+
+  private_subnet_ids = module.vpc.private_subnet_ids
+
+  cluster_security_group_id = module.security_groups.cluster_security_group_id
+}

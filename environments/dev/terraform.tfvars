@@ -23,3 +23,9 @@ cluster_role_name = "cloud-sculptor-dev-eks-cluster-role"
 node_role_name    = "cloud-sculptor-dev-eks-node-role"
 
 cluster_name = "cloud-sculptor-dev-eks"
+
+#################################################
+# EKS
+#################################################
+
+kubernetes_version = "1.33"

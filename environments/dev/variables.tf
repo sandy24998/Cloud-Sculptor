@@ -37,3 +37,12 @@ variable "cluster_name" {
 
   type = string
 }
+
+#################################################
+# EKS
+#################################################
+
+variable "kubernetes_version" {
+  description = "Amazon EKS Kubernetes Version"
+  type        = string
+}
