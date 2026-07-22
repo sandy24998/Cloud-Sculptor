@@ -23,3 +23,43 @@ cluster_role_name = "cloud-sculptor-dev-eks-cluster-role"
 node_role_name    = "cloud-sculptor-dev-eks-node-role"
 
 cluster_name = "cloud-sculptor-dev-eks"
+
+#################################################
+# EKS
+#################################################
+
+kubernetes_version = "1.33"
+
+#################################################
+# Endpoint Access
+#################################################
+
+endpoint_private_access = true
+
+endpoint_public_access = true
+
+public_access_cidrs = [
+  "0.0.0.0/0"
+]
+
+#################################################
+# Logging
+#################################################
+
+enabled_cluster_log_types = [
+  "api",
+  "audit",
+  "authenticator",
+  "controllerManager",
+  "scheduler"
+]
+
+#################################################
+# Common Tags
+#################################################
+
+tags = {
+  Project     = "Cloud-Sculptor"
+  Environment = "dev"
+  ManagedBy   = "Terraform"
+}
