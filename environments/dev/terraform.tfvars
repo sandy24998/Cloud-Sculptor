@@ -44,3 +44,9 @@ labels = {
   Environment = "dev"
   NodeGroup   = "primary"
 }
+
+tags = {
+  Project     = "Cloud-Sculptor"
+  Environment = "dev"
+  ManagedBy   = "Terraform"
+}
