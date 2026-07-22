@@ -58,7 +58,7 @@ output "node_security_group_id" {
   value = module.security_groups.node_security_group_id
 }
 
-  
+
 # EKS Outputs
 #################################################
 
@@ -100,5 +100,5 @@ output "node_group_arn" {
 
 output "node_group_status" {
   value = module.node_groups.node_group_status
- }   
+}
   

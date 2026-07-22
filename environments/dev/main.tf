@@ -29,9 +29,9 @@ module "security_groups" {
   vpc_id       = module.vpc.vpc_id
   cluster_name = var.cluster_name
 }
-  # Amazon EKS
+# Amazon EKS
 #################################################
- module "eks" {
+module "eks" {
   source = "../../modules/eks"
 
   cluster_name       = var.cluster_name
@@ -50,7 +50,7 @@ module "security_groups" {
   enabled_cluster_log_types = var.enabled_cluster_log_types
 
   tags = var.tags
-} 
+}
 
 #################################################
 # Managed Node Group
