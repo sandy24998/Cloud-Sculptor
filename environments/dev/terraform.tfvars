@@ -76,6 +76,8 @@ instance_types = [
 ]
 
 capacity_type = "ON_DEMAND"
+ami_type      = "AL2_x86_64"
+disk_size     = 20
 
 desired_size = 2
 min_size     = 2

@@ -67,6 +67,8 @@ module "node_groups" {
 
   instance_types = var.instance_types
   capacity_type  = var.capacity_type
+  ami_type       = var.ami_type
+  disk_size      = var.disk_size
 
   desired_size = var.desired_size
   min_size     = var.min_size
@@ -74,4 +76,6 @@ module "node_groups" {
 
   labels = var.labels
 
-
+  tags = var.tags
+}
+ 

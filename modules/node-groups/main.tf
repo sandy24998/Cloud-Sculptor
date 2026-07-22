@@ -3,12 +3,13 @@ resource "aws_eks_node_group" "this" {
   node_group_name = var.node_group_name
 
   node_role_arn = var.node_role_arn
-
-  subnet_ids = var.private_subnet_ids
+  subnet_ids    = var.private_subnet_ids
 
   instance_types = var.instance_types
+  capacity_type  = var.capacity_type
 
-  capacity_type = var.capacity_type
+  ami_type  = var.ami_type
+  disk_size = var.disk_size
 
   scaling_config {
     desired_size = var.desired_size

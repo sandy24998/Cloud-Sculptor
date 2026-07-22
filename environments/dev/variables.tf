@@ -71,14 +71,6 @@ variable "enabled_cluster_log_types" {
   type = list(string)
 }
 
-#################################################
-# Common Tags
-#################################################
-
-variable "tags" {
-  type = map(string)
-}
-
 
 #################################################
 # Managed Node Group
@@ -97,6 +89,18 @@ variable "instance_types" {
 variable "capacity_type" {
   description = "Capacity Type"
   type        = string
+}
+
+variable "ami_type" {
+  description = "AMI type for EKS worker nodes"
+  type        = string
+  default     = "AL2_x86_64"
+}
+
+variable "disk_size" {
+  description = "Disk size for EKS worker nodes in GiB"
+  type        = number
+  default     = 20
 }
 
 variable "desired_size" {

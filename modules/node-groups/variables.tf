@@ -44,6 +44,18 @@ variable "capacity_type" {
   type        = string
 }
 
+variable "ami_type" {
+  description = "EKS AMI type for worker nodes"
+  type        = string
+  default     = "AL2_x86_64"
+}
+
+variable "disk_size" {
+  description = "Disk size for worker nodes in GiB"
+  type        = number
+  default     = 20
+}
+
 #################################################
 # Scaling
 #################################################
