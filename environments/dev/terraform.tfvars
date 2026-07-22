@@ -24,7 +24,7 @@ node_role_name    = "cloud-sculptor-dev-eks-node-role"
 
 cluster_name = "cloud-sculptor-dev-eks"
 
-#################################################
+
 # EKS
 #################################################
 
@@ -62,4 +62,26 @@ tags = {
   Project     = "Cloud-Sculptor"
   Environment = "dev"
   ManagedBy   = "Terraform"
+}
+
+
+#################################################
+# Managed Node Group
+#################################################
+
+node_group_name = "cloud-sculptor-dev-ng"
+
+instance_types = [
+  "t3.medium"
+]
+
+capacity_type = "ON_DEMAND"
+
+desired_size = 2
+min_size     = 2
+max_size     = 3
+
+labels = {
+  Environment = "dev"
+  NodeGroup   = "primary"
 }

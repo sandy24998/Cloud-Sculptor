@@ -38,7 +38,7 @@ variable "cluster_name" {
   type = string
 }
 
-#################################################
+
 # EKS
 #################################################
 
@@ -78,3 +78,49 @@ variable "enabled_cluster_log_types" {
 variable "tags" {
   type = map(string)
 }
+
+
+#################################################
+# Managed Node Group
+#################################################
+
+variable "node_group_name" {
+  description = "Managed Node Group Name"
+  type        = string
+}
+
+variable "instance_types" {
+  description = "EC2 Instance Types"
+  type        = list(string)
+}
+
+variable "capacity_type" {
+  description = "Capacity Type"
+  type        = string
+}
+
+variable "desired_size" {
+  description = "Desired number of worker nodes"
+  type        = number
+}
+
+variable "min_size" {
+  description = "Minimum number of worker nodes"
+  type        = number
+}
+
+variable "max_size" {
+  description = "Maximum number of worker nodes"
+  type        = number
+}
+
+variable "labels" {
+  description = "Kubernetes node labels"
+  type        = map(string)
+}
+
+variable "tags" {
+  description = "Common tags applied to all resources"
+  type        = map(string)
+  default     = {}
+} 
