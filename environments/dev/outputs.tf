@@ -57,3 +57,19 @@ output "cluster_security_group_id" {
 output "node_security_group_id" {
   value = module.security_groups.node_security_group_id
 }
+
+#################################################
+# Managed Node Group Outputs
+#################################################
+
+output "node_group_name" {
+  value = module.node_groups.node_group_name
+}
+
+output "node_group_arn" {
+  value = module.node_groups.node_group_arn
+}
+
+output "node_group_status" {
+  value = module.node_groups.node_group_status
+}
