@@ -46,3 +46,35 @@ variable "kubernetes_version" {
   description = "Amazon EKS Kubernetes Version"
   type        = string
 }
+
+#################################################
+# Endpoint Access
+#################################################
+
+variable "endpoint_private_access" {
+  type = bool
+}
+
+variable "endpoint_public_access" {
+  type = bool
+}
+
+variable "public_access_cidrs" {
+  type = list(string)
+}
+
+#################################################
+# Logging
+#################################################
+
+variable "enabled_cluster_log_types" {
+  type = list(string)
+}
+
+#################################################
+# Common Tags
+#################################################
+
+variable "tags" {
+  type = map(string)
+}

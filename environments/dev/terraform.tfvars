@@ -29,3 +29,37 @@ cluster_name = "cloud-sculptor-dev-eks"
 #################################################
 
 kubernetes_version = "1.33"
+
+#################################################
+# Endpoint Access
+#################################################
+
+endpoint_private_access = true
+
+endpoint_public_access = true
+
+public_access_cidrs = [
+  "0.0.0.0/0"
+]
+
+#################################################
+# Logging
+#################################################
+
+enabled_cluster_log_types = [
+  "api",
+  "audit",
+  "authenticator",
+  "controllerManager",
+  "scheduler"
+]
+
+#################################################
+# Common Tags
+#################################################
+
+tags = {
+  Project     = "Cloud-Sculptor"
+  Environment = "dev"
+  ManagedBy   = "Terraform"
+}
