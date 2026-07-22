@@ -58,6 +58,34 @@ output "node_security_group_id" {
   value = module.security_groups.node_security_group_id
 }
 
+  
+# EKS Outputs
+#################################################
+
+output "cluster_name" {
+  value = module.eks.cluster_name
+}
+
+output "cluster_arn" {
+  value = module.eks.cluster_arn
+}
+
+output "cluster_endpoint" {
+  value = module.eks.cluster_endpoint
+}
+
+output "cluster_version" {
+  value = module.eks.cluster_version
+}
+
+output "eks_cluster_security_group_id" {
+  value = module.eks.cluster_security_group_id
+}
+
+output "oidc_issuer" {
+  value = module.eks.oidc_issuer
+}
+
 #################################################
 # Managed Node Group Outputs
 #################################################
@@ -72,4 +100,5 @@ output "node_group_arn" {
 
 output "node_group_status" {
   value = module.node_groups.node_group_status
-}
+ }   
+  
